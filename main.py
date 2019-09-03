@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 from sklearn import preprocessing
 from models import *
 
@@ -19,12 +20,17 @@ def regmodel_init(target, csv_file):
 
 
 def main():
-    x, y = regmodel_init(target="final_exam", csv_file="exams.csv")
-    # _x = np.array([1, 852, 2, 1, 36]).reshape(5, 1)
-    model = linear_regression(x, y)
+    x, y = regmodel_init(target="sold", csv_file="housing.csv")
+    _x = np.array([1, 852, 2, 1, 36, 178]).reshape(6, 1)
+    alpha = 1
+    niterations = 4000
+    atol = 0.001
+    model = oneclass_logistic_regression(x, y, alpha=alpha, niterations=niterations, atol=atol)
     model.train()
-    print(x)
-    print(model.theta)
+    print("Convergence" + " atol=" + str(atol) + ": " + str(model.gd[1]))
+    # plt.plot(model.gd[2].reshape(niterations, 1))
+    # plt.show()
+    print(model.apply(_x))
 
 
 if __name__ == '__main__':

@@ -32,7 +32,7 @@ from functions import sigmoid
 
 class linear_regression:
     def __init__(self, x, y, alpha=0.5, cost=mean_squared_error_cost,
-                 gradient=mean_squared_error_gradient, niterations=10000):
+                 gradient=mean_squared_error_gradient, niterations=10000, atol=0.0001):
         self.x, self.y = x, y
         self.m, self.n = x.shape
         self.alpha = alpha
@@ -40,24 +40,25 @@ class linear_regression:
         self.theta = np.zeros(self.n).reshape(self.n, 1)
         self.default_cost = cost
         self.default_gradient = gradient
-        self.convergence = False
+        self.atol = atol
+        self.gd = None
 
     def train(self):
         if self.n < 10000:
             self.theta = normal_equation(self.x, self.y)
         else:
             tt = gradient_descent(self.alpha, self.x, self.y, self.m, self.n, self.theta,
-                                  self.default_cost, self.default_gradient, niterations=self.niterations)
+                                  self.default_cost, self.default_gradient, self.niterations, self.atol)
             self.theta = tt[0]
-            self.convergence = tt[1]
+            self.gd = tt
 
     def apply(self, x):
         return self.theta.T @ x
 
 
 class oneclass_logistic_regression:
-    def __init__(self, x, y, alpha=0.1, cost=oneclass_logistic_function_cost,
-                 gradient=one_class_logistic_function_gradient, niterations=1000):
+    def __init__(self, x, y, alpha=0.5, cost=oneclass_logistic_function_cost,
+                 gradient=one_class_logistic_function_gradient, niterations=10000, atol=0.0001):
         self.x, self.y = x, y
         self.m, self.n = x.shape
         self.alpha = alpha
@@ -65,13 +66,14 @@ class oneclass_logistic_regression:
         self.theta = np.zeros(self.n).reshape(self.n, 1)
         self.default_cost = cost
         self.default_gradient = gradient
+        self.atol = atol
+        self.gd = None
 
     def train(self):
-        if self.n < 10000:
-            self.theta = normal_equation(self.x, self.y)
-        else:
-            self.theta = gradient_descent(self.alpha, self.x, self.y, self.m, self.n, self.theta,
-                                          self.default_cost, self.default_gradient, niterations=self.niterations)[0]
+        tt = gradient_descent(self.alpha, self.x, self.y, self.m, self.n, self.theta,
+                              self.default_cost, self.default_gradient, self.niterations, self.atol)
+        self.theta = tt[0]
+        self.gd = tt
 
     def apply(self, x):
         return sigmoid(self.theta.T @ x)

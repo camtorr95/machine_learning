@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9cf00dbe-086b-49fe-9436-82a2d34599fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Machine Learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Machine Learning.iml" afterDir="false" />
+    <list default="true" id="5b67d7d9-7e64-4825-863f-5e4ac493f43d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Machine Learning.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/housing.csv" beforeDir="false" afterPath="$PROJECT_DIR$/housing.csv" afterDir="false" />
@@ -16,32 +18,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1QCyykdKBv0mnYU1Y88QZLEtINl" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="1QKTOL0FpYwgjrdPSOs4moPFe1a" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Continuum/anaconda3/condabin/conda.bat" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ctorrest\PycharmProjects\machine_learning" />
-      <recent name="C:\Users\ctorrest\PycharmProjects\machine_learning\supervised" />
-      <recent name="C:\Users\ctorrest\PycharmProjects\machine_learning\data" />
-      <recent name="C:\Users\ctorrest\PycharmProjects\machine_learning\regression" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -57,7 +39,7 @@
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Machine Learning" />
+      <module name="machine_learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -77,8 +59,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="regression" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Machine Learning" />
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="machine_learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -89,7 +71,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\caman\PycharmProjects\Machine Learning\regression.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -101,7 +83,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.regression" />
+        <item itemvalue="Python.models" />
       </list>
     </recent_temporary>
   </component>
@@ -110,11 +92,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9cf00dbe-086b-49fe-9436-82a2d34599fc" name="Default Changelist" comment="" />
-      <created>1567289128153</created>
+      <changelist id="5b67d7d9-7e64-4825-863f-5e4ac493f43d" name="Default Changelist" comment="" />
+      <created>1567518254967</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1567289128153</updated>
+      <updated>1567518254967</updated>
     </task>
     <servers />
   </component>
@@ -123,9 +105,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
