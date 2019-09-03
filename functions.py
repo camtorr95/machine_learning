@@ -28,7 +28,7 @@ def one_class_logistic_function_gradient(x, y, m, theta):
     return (x.T @ (h - y)) / m
 
 
-def gradient_descent(alpha, x, y, m, n, theta, cost, gradient, niterations=1000):
+def gradient_descent(alpha, x, y, m, n, theta, cost, gradient, niterations=1000, atol=0.000001):
     step = np.zeros(shape=(n, 1))
     zeros = np.zeros(shape=(n, 1))
     # cost_function_table_by_niter = []
@@ -38,5 +38,5 @@ def gradient_descent(alpha, x, y, m, n, theta, cost, gradient, niterations=1000)
         step = alpha * gradient(x, y, m, theta)
         theta = theta - step
 
-    convergence = np.allclose(step, zeros)
+    convergence = np.allclose(step, zeros, atol=atol)
     return theta, convergence
