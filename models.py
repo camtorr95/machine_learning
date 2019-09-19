@@ -43,14 +43,14 @@ class linear_regression:
         self.atol = atol
         self.gd = None
 
-    def train(self):
-        if self.n < 10000:
-            self.theta = normal_equation(self.x, self.y)
-        else:
-            tt = gradient_descent(self.alpha, self.x, self.y, self.m, self.n, self.theta,
-                                  self.default_cost, self.default_gradient, self.niterations, self.atol)
-            self.theta = tt[0]
-            self.gd = tt
+    def normal_equation(self):
+        self.theta = normal_equation(self.x, self.y)
+
+    def gradient_descent_opt(self):
+        tt = gradient_descent(self.alpha, self.x, self.y, self.theta,
+                              self.default_cost, self.default_gradient, self.niterations, self.atol)
+        self.theta = tt[0]
+        self.gd = tt
 
     def apply(self, x):
         return self.theta.T @ x
@@ -69,8 +69,8 @@ class oneclass_logistic_regression:
         self.atol = atol
         self.gd = None
 
-    def train(self):
-        tt = gradient_descent(self.alpha, self.x, self.y, self.m, self.n, self.theta,
+    def gradient_descent_opt(self):
+        tt = gradient_descent(self.alpha, self.x, self.y, self.theta,
                               self.default_cost, self.default_gradient, self.niterations, self.atol)
         self.theta = tt[0]
         self.gd = tt
